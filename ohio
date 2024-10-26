@@ -1,0 +1,369 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+-- 创建屏幕GUI元素
+local LBLG = Instance.new("ScreenGui", game.CoreGui)
+LBLG.Name = "LBLG"
+LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LBLG.Enabled = true
+
+-- 创建文本标签
+local LBL = Instance.new("TextLabel", LBLG)
+LBL.Name = "LBL"
+LBL.BackgroundColor3 = Color3.new(1, 1, 1)
+LBL.BackgroundTransparency = 1
+LBL.BorderColor3 = Color3.new(0, 0, 0)
+LBL.Position = UDim2.new(0.75, 0, 0.010, 0)
+LBL.Size = UDim2.new(0, 133, 0, 30)
+LBL.Font = Enum.Font.GothamSemibold
+LBL.Text = "TextLabel"
+LBL.TextColor3 = Color3.new(1, 1, 1)
+LBL.TextScaled = true
+LBL.TextSize = 14
+LBL.TextWrapped = true
+LBL.Visible = true
+
+-- 获取RunService并设置相关变量
+local Heartbeat = game:GetService("RunService").Heartbeat
+local LastIteration, Start
+local FrameUpdateTable = {}
+
+-- 心跳更新函数
+local function HeartbeatUpdate()
+    LastIteration = tick()
+    for Index = #FrameUpdateTable, 1, -1 do
+        FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
+    end
+    FrameUpdateTable[1] = LastIteration
+    local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
+    CurrentFPS = math.floor(CurrentFPS)
+    -- 设置文本为北京时间格式
+    LBL.Text = ("北京时间: " .. os.date("%H") .. " 时 " .. os.date("%M") .. " 分 " .. os.date("%S") .. " 秒")
+end
+
+-- 开始计时
+Start = tick()
+
+-- 连接Heartbeat事件
+Heartbeat:Connect(HeartbeatUpdate)
+
+-- 创建Orion窗口
+local Window = OrionLib:MakeWindow({
+    Name = " BS俄亥俄州",
+    HidePremium = false,
+    SaveConfig = false,
+    IntroText = "BS俄亥俄州",
+    ConfigFolder = "欢迎使用"
+})
+
+local Tab = Window:MakeTab({
+    Name = "脚本公告",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+Tab:AddLabel("作者QQ：2770967217")
+Tab:AddLabel("QQ群：813485162")
+Tab:AddLabel("🤓😞😅🤩🤬👿🥵🥶")
+Tab:AddLabel("😡😠😍😨😤😲🤮😉")
+Tab:AddLabel("脚本永久免费，禁止倒卖")
+
+local Tab = Window:MakeTab({
+    Name = "战斗",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+local Tab = Window:MakeTab({
+    Name = "功能",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "秒开银行",
+  Callback = function()
+while true do
+        	    wait(1)
+        	    game.Workspace.BankRobbery.VaultDoor.Door.Attachment.ProximityPrompt.HoldDuration = 0
+                game.Workspace.BankRobbery.BankCash.Main.Attachment.ProximityPrompt.MaxActivationDistance= 20
+        	end
+  end
+}）
+
+Tab:AddButton({
+  Name = "秒开金保险",
+  Callback = function()
+while true do
+        			wait(1)
+        			local safe = game.workspace.Game.Entities.GoldJewelSafe.GoldJewelSafe
+        			safe.Door["Meshes/LargeSafe_Cube.002_Cube.003_None (1)"].Attachment.ProximityPrompt.HoldDuration = 0
+        			safe.Door["Meshes/LargeSafe_Cube.002_Cube.003_None (1)"].Attachment.ProximityPrompt.MaxActivationDistance= 20
+        			safe.Name = "safeopen"
+        		end
+  end
+})
+
+Tab:AddButton({
+  Name = "秒拿空投",
+  Callback = function()
+while true do
+        		wait(1)
+        		game:GetService("Workspace").Game.Airdrops.Airdrop.Airdrop.ProximityPrompt.HoldDuration = 0
+        		game:GetService("Workspace").Game.Airdrops.Airdrop.Airdrop.ProximityPrompt.MaxActivationDistance= 20
+        		game:GetService("Workspace").Game.Airdrops.Airdrop.Airdrop.Name = "airdropopen"
+        	end
+  end
+})
+
+Tab:AddButton({
+  Name = "秒开黑保险",
+  Callback = function()
+   while true do
+        		wait(1)
+        		local safe2 = game.workspace.Game.Entities.JewelSafe.JewelSafe
+        		safe2.Door["Meshes/LargeSafe_Cube.002_Cube.003_None (1)"].Attachment.ProximityPrompt.HoldDuration = 0
+        		safe.Door["Meshes/LargeSafe_Cube.002_Cube.003_None (1)"].Attachment.ProximityPrompt.MaxActivationDistance= 20
+        		safe2.Name = "safeopen"
+        	end
+  end
+})
+
+Tab:AddButton({
+  Name = "瞬移秒开金保险",
+  Callback = function()
+local rocks = game:GetService("Workspace").GemRobbery.JewelryCases.HighYieldSpawns
+            for _, obj in pairs(rocks:GetChildren()) do
+                if obj.ClassName == "Model" then
+                    for _, innerObj in pairs(obj:GetChildren()) do
+                        if innerObj.ClassName == "Model" then
+                            if innerObj.Name == "Case" then
+                            elseif innerObj.Name == "Emerald" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Sapphire" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Amethyst" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Topaz" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end                     
+                            elseif innerObj.Name == "Diamond" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Gold Bar" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Ruby" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            else
+                                if innerObj:FindFirstChild("Box") and innerObj.Box:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Box.ProximityPrompt.HoldDuration = 0
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+            local rocks2 = game:GetService("Workspace").GemRobbery.JewelryCases.LowYieldSpawns
+            for _, obj in pairs(rocks2:GetChildren()) do
+                if obj.ClassName == "Model" then
+                    for _, innerObj in pairs(obj:GetChildren()) do
+                        if innerObj.ClassName == "Model" then
+                            if innerObj.Name == "Case" then
+                            elseif innerObj.Name == "Emerald" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Sapphire" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Amethyst" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Topaz" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Diamond" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Gold Bar" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            elseif innerObj.Name == "Ruby" then
+                                if innerObj:FindFirstChild("Handle") and innerObj.Handle:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Handle.ProximityPrompt.HoldDuration = 0
+                                end
+                            else
+                                if innerObj:FindFirstChild("Box") and innerObj.Box:FindFirstChild("ProximityPrompt") then
+                                    innerObj.Box.ProximityPrompt.HoldDuration = 0
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+  end
+})
+
+Tab:AddButton({
+  Name = "瞬移开大宝箱",
+  Callback = function()
+local LargeChes = game:GetService("Workspace").Game.Entities.LargeChest
+            local foundModel = false
+            for _, model in pairs(LargeChes:GetChildren()) do
+                if model.ClassName == "Model" then
+                    foundModel = true
+                    local epoh1 = model.WorldPivot
+                    local epoh2 = game:GetService("Players")
+                    local epoh3 = epoh2.LocalPlayer.Character.HumanoidRootPart
+                    epoh3.CFrame = epoh1 * CFrame.new(0, 2, 0)
+                    wait(0.1)
+                    model.Door["Meshes/LargeSafe1_Cube.002_Cube.003_None (3)"].Attachment.ProximityPrompt:InputHoldBegin()
+                    model.Door["Meshes/LargeSafe1_Cube.002_Cube.003_None (3)"].Attachment.ProximityPrompt:InputHoldEnd()
+                    break
+                end
+            end
+  end
+})
+
+
+local Tab = Window:MakeTab({
+    Name = "传送",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "银行",
+  Callback = function()
+   local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(1055.94153, 15.11950874, -344.58374)
+            tp2.CFrame = tp3
+        end
+})
+
+Tab:AddButton({
+  Name = "珠宝店",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(1719.02637, 14.2831011, -714.293091)
+            tp2.CFrame = tp3
+ end
+})
+            
+Tab:AddButton({
+  Name = "黑市",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(690.499, -18.949, -115.453)
+            tp2.CFrame = tp3
+  end
+})
+
+Tab:AddButton({
+  Name = "沙滩",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(998.4656372070312, 15, 395.9789733886719)
+            tp2.CFrame = tp3
+  end
+})
+
+Tab:AddButton({
+  Name = "撬棍",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(660.5284423828125, 6.4081127643585205, -716.489990234375)
+            tp2.CFrame = tp3
+  end
+})
+
+Tab:AddButton({
+  Name = "m4a1",
+  Callback = function()
+   local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(603.4676513671875,25.662811279296875,-922.0442504882812)
+            tp2.CFrame = tp3
+  end
+})
+
+Tab:AddButton({
+  Name = "护甲",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(563.4422607421875,28.502071380615234,-1472.780517578125)
+            tp2.CFrame = tp3
+  end
+})
+
+Tab:AddButton({
+  Name = "武士刀",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(175.191, 13.937, -132.69)
+            tp2.CFrame = tp3
+  end
+})
+
+Tab:AddButton({
+  Name = "喷子",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(1179.98523,40,-436.812683)
+            tp2.CFrame = tp3
+  end
+})
+
+Tab:AddButton({
+  Name = "沙漠之鹰",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(363.341461, 26.0798492, -259.681396)
+            tp2.CFrame = tp3
+  end
+})
+
+Tab:AddButton({
+  Name = "射线枪",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(148.685471, -90, -529.280945)
+            tp2.CFrame = tp3
+  end
+})
+
+Tab:AddButton({
+  Name = "AUG",
+  Callback = function()
+local tp1 = game:GetService("Players")
+            local tp2 = tp1.LocalPlayer.Character.HumanoidRootPart
+            local tp3 = CFrame.new(1170.500244140625,48.37138366699219,-772.55859375)
+            tp2.CFrame = tp3
+  end
+})
+

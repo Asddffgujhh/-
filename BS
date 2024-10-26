@@ -2023,6 +2023,46 @@ Tab:AddButton({
   end
 })
 
+local Tab = Window:MakeTab({
+    Name = "ohio",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = " BS俄亥俄州(半成品)",
+  Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Asddffgujhh/-/refs/heads/main/ohio'))()
+  end
+})
+
+Tab:AddButton({
+  Name = "xk俄亥俄州",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BINjiaobzx6/BINjiao/main/XK%20Ohio.lua"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "tm俄亥俄州",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FZIKNEZNTAXSUGVD/-1/main/TM%E8%84%9A%E6%9C%ACTM"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "死亡笔记(吸人)",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/krlpl/dfhj/main/%E6%AD%BB%E4%BA%A1%E7%AC%94%E8%AE%B0.txt"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "一拳超人",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxluau/Roblox/main/ScriptHub.lua"))()
+  end
+})
   end)
 end
 local myTitle = "黑洞中心" 

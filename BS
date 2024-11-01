@@ -2063,6 +2063,100 @@ Tab:AddButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxluau/Roblox/main/ScriptHub.lua"))()
   end
 })
+
+local Tab = Window:MakeTab({
+    Name = "最强战场",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "琦玉自动连招",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/AutoLordHeavenCombo/refs/heads/main/ByCyborg"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "刀锋",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zyrask/Nexus-Base/main/atomic-blademaster%20to%20sukuna"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "五条悟",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/main/Latest.lua"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "饿狼1+2",
+  Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/Z7DawZJB/raw"))()
+  end
+})
+
+Tab:AddButton({
+	Name = "琦玉改JUN",
+	Callback = function()
+	
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Tp%20exploit%20saitama%20to%20jun'))()
+
+end
+})
+
+Tab:AddButton({
+	Name = "骨架",
+	Callback = function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Qaiddanial2904/ROBLOX-FREAKY-GOJO-REAL/refs/heads/main/SANS%20%5BREDACTED%5D"))()
+
+end
+})
+
+Tab:AddButton({
+	Name = "迪奥",
+	Callback = function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Medley-Taboritsky/RobloxScripting/refs/heads/main/DIO_Garou_TSB"))()
+
+end
+})
+
+Tab:AddButton({
+	Name = "索尼克改TOJI",
+	Callback = function()
+	
+loadstring(game:HttpGet"https://raw.githubusercontent.com/Wi-sp/Limitless-legacy/refs/heads/main/GUI")()
+
+end
+})
+
+Tab:AddButton({
+	Name = "饿狼",
+	Callback = function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/refs/heads/main/ARCAURA.lua"))()
+
+end
+})
+
+local Tab = Window:MakeTab({
+  Name = "战争大亨",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+  })
+  Tab:AddButton({
+	Name = "自动偷箱",
+	Callback = function()
+	
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cazzanos/The-basement/main/Basement%20hub', true))()
+
+end
+})
+
   end)
 end
 local myTitle = "黑洞中心" 

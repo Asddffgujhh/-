@@ -2064,6 +2064,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxluau/Roblox/main/S
   end
 })
 
+Tab:AddButton({
+
+	Name = "物品tp自动拾取",
+
+	Callback = function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mstir16/legocheats/main/archive/Ohio./script.lua"))()
+
+    end
+
+})	
+
 local Tab = Window:MakeTab({
     Name = "最强战场",
     Icon = "rbxassetid://7734068321",
@@ -2157,7 +2169,311 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Cazzanos/The-basement
 end
 })
 
+Tab:AddButton({
+	Name = "一枪秒人",
+	Callback = function()
+loadstring(game:HttpGet('https://pastebin.com/raw/6b4XEjQF'))()
+end
+})
+
+Tab:AddButton({
+	Name = "无限子弹(打一枪再开)",
+	Callback = function()
+--> by huh
+local Players = game:GetService("Players")
+local VirtualInputManager = game:GetService("VirtualInputManager")
+
+local LocalPlayer = Players.LocalPlayer 
+local HasShotGun = false 
+
+local UsedGuns = {}
+local ReloadedGun
+
+local OldNamecall; OldNamecall = hookmetamethod(game, "__namecall", function(Self, ...)
+    if Self.Name == "FireBullet" then 
+        HasShotGun = true 
+    end
+
+    return OldNamecall(Self, ...)
+end)
+
+if LocalPlayer.Character then 
+    local Character = LocalPlayer.Character 
+
+    if Character:FindFirstChildWhichIsA("Tool") then 
+        local Tool = Character:FindFirstChildWhichIsA("Tool")
+        local ToolName = Tool.Name 
+
+        if not table.find(UsedGuns, Tool.Name) and not HasShotGun then 
+            repeat task.wait() until HasShotGun
+
+            table.insert(UsedGuns, Tool.Name)
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.R, false, game)
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.R, false, game)
+
+            if Tool:FindFirstChild("Settings", true) then 
+                local GunProperties = require(Tool:FindFirstChild("Settings", true))
+                
+                GunProperties.Mode = "Auto"
+                GunProperties.FireModes = {Semi = false, Auto = true, Burst = false}
+                GunProperties.Ammo = math.huge
+                GunProperties.FireRate = 100000000000000
+                GunProperties.BSpeed = 1000000
+                GunProperties.DamageMultiplier = math.huge
+
+                GunProperties.MinRecoilPower = 0
+                GunProperties.VRecoil = {0, 0}
+                GunProperties.HRecoil = {0, 0}
+                GunProperties.MaxRecoilPower = 0
+                GunProperties.AimRecoilReduction = math.huge
+                GunProperties.RecoilPowerStepAmount = 0
+                GunProperties.RecoilPunch = 0
+                GunProperties.DamageMultiplier = 1000
+
+
+                GunProperties.MinSpread = 0
+                GunProperties.MaxSpread = 0
+            end 
+
+            Tool.Parent = LocalPlayer.Backpack 
+            LocalPlayer.Backpack[ToolName].Parent = Character
+        end
+    end 
+
+    Character.ChildAdded:Connect(function(Child)
+        if Child:IsA("Tool") and not table.find(UsedGuns, Child.Name) and not HasShotGun then 
+            local Tool = Child
+            local ToolName = Tool.Name
+
+            repeat task.wait() until HasShotGun
+            table.insert(UsedGuns, Tool.Name)
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.R, false, game)
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.R, false, game)
+
+            if Tool:FindFirstChild("Settings", true) then 
+                local GunProperties = require(Tool:FindFirstChild("Settings", true))
+                
+                GunProperties.Mode = "Auto"
+                GunProperties.FireModes = {Semi = false, Auto = true, Burst = false}
+                GunProperties.Ammo = math.huge
+                GunProperties.FireRate = 100000000000000
+                GunProperties.BSpeed = 1000000
+                GunProperties.DamageMultiplier = math.huge
+
+                GunProperties.MinRecoilPower = 0
+                GunProperties.VRecoil = {0, 0}
+                GunProperties.HRecoil = {0, 0}
+                GunProperties.MaxRecoilPower = 0
+                GunProperties.AimRecoilReduction = math.huge
+                GunProperties.RecoilPowerStepAmount = 0
+                GunProperties.RecoilPunch = 0
+                GunProperties.DamageMultiplier = 1000
+
+
+                GunProperties.MinSpread = 0
+                GunProperties.MaxSpread = 0
+            end 
+
+            Tool.Parent = LocalPlayer.Backpack 
+            LocalPlayer.Backpack[ToolName].Parent = Character
+        end 
+
+        if Child:IsA("Tool") and not table.find(UsedGuns, Child.Name) and HasShotGun then 
+            HasShotGun = false
+            local Tool = Child
+            local ToolName = Tool.Name
+            
+            repeat task.wait() until HasShotGun
+            table.insert(UsedGuns, Tool.Name)
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.R, false, game)
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.R, false, game)
+
+            if Tool:FindFirstChild("Settings", true) then 
+                local GunProperties = require(Tool:FindFirstChild("Settings", true))
+                
+                GunProperties.Mode = "Auto"
+                GunProperties.FireModes = {Semi = false, Auto = true, Burst = false}
+                GunProperties.Ammo = math.huge
+                GunProperties.FireRate = 100000000000000
+                GunProperties.BSpeed = 1000000
+                GunProperties.DamageMultiplier = math.huge
+
+                GunProperties.MinRecoilPower = 0
+                GunProperties.VRecoil = {0, 0}
+                GunProperties.HRecoil = {0, 0}
+                GunProperties.MaxRecoilPower = 0
+                GunProperties.AimRecoilReduction = math.huge
+                GunProperties.RecoilPowerStepAmount = 0
+                GunProperties.RecoilPunch = 0
+                GunProperties.DamageMultiplier = 1000
+
+
+                GunProperties.MinSpread = 0
+                GunProperties.MaxSpread = 0
+            end 
+
+            Tool.Parent = LocalPlayer.Backpack 
+            LocalPlayer.Backpack[ToolName].Parent = Character
+        end 
+    end)
+end 
+
+LocalPlayer.CharacterAdded:Connect(function(Character)
+    HasShotGun = false 
+    UsedGuns = {}
+
+    Character.ChildAdded:Connect(function(Child)
+        if Child:IsA("Tool") and not table.find(UsedGuns, Child.Name) and not HasShotGun then 
+            local Tool = Child
+            local ToolName = Tool.Name
+
+            repeat task.wait() until HasShotGun
+            table.insert(UsedGuns, Tool.Name)
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.R, false, game)
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.R, false, game)
+
+            if Tool:FindFirstChild("Settings", true) then 
+                local GunProperties = require(Tool:FindFirstChild("Settings", true))
+                
+                GunProperties.Mode = "Auto"
+                GunProperties.FireModes = {Semi = false, Auto = true, Burst = false}
+                GunProperties.Ammo = math.huge
+                GunProperties.FireRate = 100000000000000
+                GunProperties.BSpeed = 1000000
+                GunProperties.DamageMultiplier = math.huge
+
+                GunProperties.MinRecoilPower = 0
+                GunProperties.VRecoil = {0, 0}
+                GunProperties.HRecoil = {0, 0}
+                GunProperties.MaxRecoilPower = 0
+                GunProperties.AimRecoilReduction = math.huge
+                GunProperties.RecoilPowerStepAmount = 0
+                GunProperties.RecoilPunch = 0
+                GunProperties.DamageMultiplier = 1000
+
+
+                GunProperties.MinSpread = 0
+                GunProperties.MaxSpread = 0
+            end 
+
+            Tool.Parent = LocalPlayer.Backpack 
+            LocalPlayer.Backpack[ToolName].Parent = Character
+        end 
+
+        if Child:IsA("Tool") and not table.find(UsedGuns, Child.Name) and HasShotGun then 
+            HasShotGun = false
+            local Tool = Child
+            local ToolName = Tool.Name
+            
+            repeat task.wait() until HasShotGun
+            table.insert(UsedGuns, Tool.Name)
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.R, false, game)
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.R, false, game)
+
+            if Tool:FindFirstChild("Settings", true) then 
+                local GunProperties = require(Tool:FindFirstChild("Settings", true))
+                
+                GunProperties.Mode = "Auto"
+                GunProperties.FireModes = {Semi = false, Auto = true, Burst = false}
+                GunProperties.Ammo = math.huge
+                GunProperties.FireRate = 100000000000000
+                GunProperties.BSpeed = 1000000
+                GunProperties.DamageMultiplier = math.huge
+
+                GunProperties.MinRecoilPower = 0
+                GunProperties.VRecoil = {0, 0}
+                GunProperties.HRecoil = {0, 0}
+                GunProperties.MaxRecoilPower = 0
+                GunProperties.AimRecoilReduction = math.huge
+                GunProperties.RecoilPowerStepAmount = 0
+                GunProperties.RecoilPunch = 0
+                GunProperties.DamageMultiplier = 1000
+
+
+                GunProperties.MinSpread = 0
+                GunProperties.MaxSpread = 0
+            end 
+
+            Tool.Parent = LocalPlayer.Backpack 
+            LocalPlayer.Backpack[ToolName].Parent = Character
+        end 
+    end)
+end)    
+
+end
+})
+
+Tab:AddButton({
+	Name = "传送空投",
+	Callback = function()
+local Folder = workspace["Game Systems"] local player = game.Players.LocalPlayer.Character.HumanoidRootPart for _, Child in ipairs(Folder:GetDescendants()) do if Child.Name:match("Airdrop_") then player.CFrame = Child.MainPart.CFrame end end
+end
+})
+
+Tab:AddButton({
+	Name = "回基地",
+	Callback = function()
+game:GetService("Players").LocalPlayer.Character:MoveTo(workspace.Tycoon.Tycoons[game:GetService("Players").LocalPlayer.leaderstats.Team.Value].Essentials.Spawn.Position)
+end
+})
+
+Tab:AddButton({
+	Name = "旗帜",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(73.22032928466797, 47.9999885559082, 191.06993103027344)
+end
+})
+
+Tab:AddButton({
+	Name = "油桶1",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9.748652458190918, 48.662540435791016, 700.2245483398438)
+end
+})
+
+Tab:AddButton({
+	Name = "油桶2",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76.48243713378906, 105.25657653808594, -2062.3896484375)
+end
+})
+
+Tab:AddButton({
+	Name = "油桶3",
+	Callback = function()
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-28.840208053588867, 49.34040069580078, -416.9921569824219)
+end
+})
+
+Tab:AddButton({
+	Name = "油桶4",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(69.48390197753906, 105.25657653808594, 3434.9033203125)
+end
+})
   end)
 end
+
+local Tab = Window:MakeTab({
+	Name = "内脏与黑火药",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "茗月清风",
+	Callback = function()
+loadstring(game:HttpGet(("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\115\120\99\115\114\49\49\52\53\49\52\47\115\120\99\115\114\49\49\52\53\49\52\49\47\109\97\105\110\47\115\120\99\115\114\49\51\52\56\52\56\52\56\56\46\108\117\97"),true))()
+  	end
+})
+
+Tab:AddButton({
+	Name = "2",
+	Callback = function()
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\34\104\116\116\112\115\58\47\47\102\114\101\101\110\111\116\101\46\98\105\122\47\114\97\119\47\109\117\122\110\104\101\114\104\114\117\34\41\44\116\114\117\101\41\41\40\41\10")()
+  	end
+})
+
+
 local myTitle = "黑洞中心" 
 CreateGUI(myTitle)

@@ -444,6 +444,15 @@ loadstring(game:HttpGet("https://pastebin.com/raw/gdLR5Z7X"))()
   end
 })
 
+Tab:AddButton({
+	Name = "聊天绕过",
+	Callback = function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BingusWR/Fechatbypassroblox/refs/heads/main/Fe%20Roblox%20ChatBypass"))()
+	
+end
+})
+
 local Tab = Window:MakeTab({
 	Name = "通用2",
 	Icon = "rbxassetid://7734068321",
@@ -2009,6 +2018,13 @@ Tab:AddButton({
   end
 })
 
+Tab:AddButton({
+	Name = "zs",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/zuohongjian/bjb/main/ZS%20III"))()
+  	end
+})
+
 local Tab = Window:MakeTab({
     Name = "ohio",
     Icon = "rbxassetid://7734068321",
@@ -2993,5 +3009,206 @@ Tab:AddButton({
 	Name = "脚本1",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/anlushanjinchangantangwanle/refs/heads/main/bingshangdiaofish.lua"))()
+  	end
+})
+
+local Tab = Window:MakeTab({
+    Name = "bf",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "脚本1",
+	Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/TirSANX/CrimsonHUB/main/C_Loader'))()
+  	end
+})
+
+Tab:AddButton({
+	Name = "脚本2",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
+  	end
+})
+
+Tab:AddButton({
+	Name = "脚本3",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+  	end
+})
+
+Tab:AddButton({
+	Name = "脚本4",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/Tiger-Hub/main/loader.lua"))()
+  	end
+})
+
+Tab:AddButton({
+	Name = "脚本5",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/m1M-Plqer819/any/main/mbmxhub/0135"))()
+  	end
+})
+
+local Tab = Window:MakeTab({
+    Name = "彩虹朋友",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name="彩虹朋友",
+    Callback=function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Sempiller/RainbowTool/main/Turkish.lua'))();
+    end
+})
+
+Tab:AddButton({
+	Name = "彩虹朋友2",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/Rainbow-Friends/main/Rainbow%20Friends"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "内脏与黑火药",
+
+	Icon = "rbxassetid://7734068321",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "内脏与黑火药1",
+
+	Callback = function()
+	loadstring(game:HttpGet("https://shz.al/~KSKKS"))()
+	end
+})
+
+Tab:AddButton({
+
+	Name = "内脏与黑火药2",
+
+	Callback = function()
+	loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\34\104\116\116\112\115\58\47\47\102\114\101\101\110\111\116\101\46\98\105\122\47\114\97\119\47\109\117\122\110\104\101\114\104\114\117\34\41\44\116\114\117\101\41\41\40\41\10")()
+	end
+})
+
+local player = Window:MakeTab({
+	Name = "幸运方块",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+
+player:AddButton({ 
+	Name = "脚本1",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/PlanetHubX/Lucky-Blocks/main/source", true))()
+  	end
+})
+
+local Tab = Window:MakeTab({
+  Name = "造船寻宝",
+  Icon = "rbxassetid://7733779610",
+  PremiumOnly = false
+  })
+  
+Tab:AddButton({
+	Name = "脚本1",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/urmomjklol69/GoldFarmBabft/main/GoldFarm.lua'),true))()
+    end
+})
+
+Tab:AddButton({
+  Name = "复制别人的船",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/max2007killer/auto-build-not-limit/main/autobuild.txt"))()---https://discord.gg/HjNaYs6AnV discord
+  end
+})
+
+Tab:AddButton({
+	Name = "无限方块",
+	Callback = function()
+       spawn(function()
+local guiinf = game:GetService("Players").LocalPlayer.PlayerGui.BuildGui.InventoryFrame.ScrollingFrame.BlocksFrame
+_G.Blocks = false
+while game:GetService("RunService").RenderStepped:wait() do
+   if _G.Blocks then return end
+       for i,v in pairs(guiinf:GetDescendants()) do
+               if v.Name == "AmountText" then
+               v.Text = math.huge
+           end
+       end
+   end
+end)
+  	end
+})
+
+Tab:AddButton({
+	Name = "刷钱",
+	Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/urmomjklol69/GoldFarmBabft/main/GoldFarm.lua'),true))()
+  	end
+})
+
+local Tab = Window:MakeTab({
+  Name = "进击的僵尸",
+  Icon = "rbxassetid://7733779610",
+  PremiumOnly = false
+  })
+  
+Tab:AddButton({
+	Name = "进击的僵尸",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Zombie%20Attack", true))()
+	end
+})
+
+local Tab = Window:MakeTab({
+  Name = "战斗勇士",
+  Icon = "rbxassetid://7733779610",
+  PremiumOnly = false
+  })
+  
+Tab:AddButton({
+	Name = "脚本1",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/frkfx/Combat-Warriors/main/Script"))()
+  	end
+})
+
+Tab:AddButton({
+	Name = "脚本2",
+	Callback = function()
+      loadstring(game:HttpGet("https://paste.gg/p/anonymous/697fc3cad5f743508318cb7399e89432/files/b5923e52edab4e5c91e46b74563d0ae8/raw"))()
+  	end
+})
+
+local Tab = Window:MakeTab({
+	Name = "鲨口求生2",
+	Icon = "rbxassetid://786515108",
+	PremiumOnly = false
+})
+Tab:AddDropdown({
+	Name = "免费船只",
+	Default = "1",
+	Options = {"鸭子船bat", "鸭子船", "蓝色汽艇", "蓝木摩托艇", "独角兽船", "Jetski", "红马", "单桅帆船", "拖船", "小型游艇", "JetskiDonut", "马林鱼", "管状船", "渔船", "海盗船", "小型木制帆船", "红色摩托艇", "双体船", "战斗艇", "旅游船", "鸭子海洋生物", "派对船", "军用潜艇",  "姜饼轮船", "雪橇2022", "雪地车", "游轮"},
+	Callback = function(Value)
+local ohString1 = (Value)
+game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
+	end
+})
+Tab:AddButton({
+	Name = "自动杀鲨鱼",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
   	end
 })

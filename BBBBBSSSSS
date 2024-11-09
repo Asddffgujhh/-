@@ -2869,6 +2869,13 @@ Tab:AddButton({
   	end
 })
 
+Tab:AddButton({
+	Name = "超强指令",
+	Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Asddffgujhh/-/refs/heads/main/%E7%9B%91%E7%8B%B1%E4%BA%BA%E7%94%9F%E8%B6%85%E5%BC%BA%E6%8C%87%E4%BB%A4'))()
+  	end
+})
+
 local Tab = Window:MakeTab({
     Name = "力量传奇",
     Icon = "rbxassetid://7734068321",

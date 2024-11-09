@@ -3103,7 +3103,7 @@ Tab:AddButton({
 
 local player = Window:MakeTab({
 	Name = "幸运方块",
-	Icon = "rbxassetid://7733779610",
+	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
 
@@ -3116,7 +3116,7 @@ player:AddButton({
 
 local Tab = Window:MakeTab({
   Name = "造船寻宝",
-  Icon = "rbxassetid://7733779610",
+  Icon = "rbxassetid://7734068321",
   PremiumOnly = false
   })
   
@@ -3161,7 +3161,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
   Name = "进击的僵尸",
-  Icon = "rbxassetid://7733779610",
+  Icon = "rbxassetid://7734068321",
   PremiumOnly = false
   })
   
@@ -3174,7 +3174,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkra
 
 local Tab = Window:MakeTab({
   Name = "战斗勇士",
-  Icon = "rbxassetid://7733779610",
+  Icon = "rbxassetid://7734068321",
   PremiumOnly = false
   })
   
@@ -3194,7 +3194,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
 	Name = "鲨口求生2",
-	Icon = "rbxassetid://786515108",
+	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
 Tab:AddDropdown({

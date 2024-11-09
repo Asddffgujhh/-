@@ -2970,55 +2970,6 @@ loadstring(game:HttpGet('https://pastebin.com/raw/6b4XEjQF'))()
 
 
 Tab:AddButton({
-	Name = "传送油桶1",
-	Callback = function()
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9.748652458190918, 48.662540435791016, 700.2245483398438)
-  	end
-})
-
-Tab:AddButton({
-	Name = "传送油桶2",
-	Callback = function()
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76.48243713378906, 105.25657653808594, -2062.3896484375)
-  	end
-})
-
-Tab:AddButton({
-	Name = "传送油桶3",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-28.840208053588867, 49.34040069580078, -416.9921569824219)
-  end
-})
-
-Tab:AddButton({
-	Name = "传送油桶4",
-	Callback = function()
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(69.48390197753906, 105.25657653808594, 3434.9033203125)
-  	end
-})
-
-Tab:AddButton({
-	Name = "传送基地",
-	Callback = function()
-      ame:GetService("Players").LocalPlayer.Character:MoveTo(workspace.Tycoon.Tycoons[game:GetService("Players").LocalPlayer.leaderstats.Team.Value].Essentials.Spawn.Position)
-  	end
-})
-
-Tab:AddButton({
-	Name = "传送空投",
-	Callback = function()
-      ocal Folder = workspace["Game Systems"] local player = game.Players.LocalPlayer.Character.HumanoidRootPart for _, Child in ipairs(Folder:GetDescendants()) do if Child.Name:match("Airdrop_") then player.CFrame = Child.MainPart.CFrame end end
-  	end
-})
-
-Tab:AddButton({
-	Name = "传送旗帜",
-	Callback = function()
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(73.22032928466797, 47.9999885559082, 191.06993103027344)
-  	end
-})
-
-Tab:AddButton({
 	Name = "脚本1",
 	Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Nivex123456/War-Tycoon/main/Script"))()

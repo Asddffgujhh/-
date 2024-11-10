@@ -3249,13 +3249,6 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-	Name = "自动收集燃料",
-	Callback = function(ARL)
-    isFuelScoopEnabled = ARL while true do wait() if isFuelScoopEnabled then for i, h in pairs(game.Players.LocalPlayer.Character:GetChildren()) do if h:IsA("Tool") and h.Name == "FuelScoop" then h:Activate() end end end end
-  	end
-})
-
-Tab:AddButton({
 	Name = "登上火箭",
 	Callback = function()
 	game:GetService("ReplicatedStorage"):WaitForChild("BoardRocket"):FireServer()

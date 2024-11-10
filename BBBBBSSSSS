@@ -1955,6 +1955,13 @@ getgenv().XiaoPi="蓝标脚本 蓝标群912849177" loadstring(game:HttpGet("http
   end
 })
 
+Tab:AddButton({
+	Name = "泠脚本",
+	Callback = function()
+      getgenv().Leng="冷脚本QQ群815883059" loadstring(game:HttpGet("https://raw.githubusercontent.com/odhdshhe/lenglenglenglenglenglenlenglenglenglenglenglenglengleng-LBT-H-cold-script/refs/heads/main/LENG%20LBT-H%20cold%20script.txt"))()
+  	end
+})
+
 local Tab = Window:MakeTab({
     Name = "doors",
     Icon = "rbxassetid://7734068321",
@@ -2876,6 +2883,14 @@ Tab:AddButton({
   	end
 })
 
+Tab:AddButton({
+	Name = "杀死光环",
+	Callback = function()
+      (SSGH)
+    States.KillAura = SSGH if state then print("Kill Aura On") CreateKillPart() else print("Kill Aura Off") if Parts[1] and Parts[1].Name == "KillAura" then Parts[1]:Destroy() Parts[1] = nil end end end) function CreateKillPart() if Parts[1] then pcall(function() Parts[1]:Destroy() end) Parts[1] = nil end local Part = Instance.new("Part",plr.Character) local hilight = Instance.new("Highlight",Part) hilight.FillTransparency = 1 Part.Anchored = true Part.CanCollide = false Part.CanTouch = false Part.Material = Enum.Material.SmoothPlastic Part.Transparency = .98 Part.Material = Enum.Material.SmoothPlastic Part.BrickColor = BrickColor.White() Part.Size = Vector3.new(20,2,20) Part.Name = "KillAura" Parts[1] = Part end task.spawn(function() repeat task.wait()until plr.Character and char and char:FindFirstChildOfClass("Humanoid") if States.KillAura then CreateKillPart() end end) game:GetService("RunService").Stepped:Connect(function() if States.KillAura then for i,v in pairs(game.Players:GetPlayers()) do if v ~= game.Players.LocalPlayer then if (v.Character.HumanoidRootPart.Position - plr.Character.HumanoidRootPart.Position).magnitude <14 and v.Character.Humanoid.Health >0 then local args = {[1] = v} for i =1,2 do task.spawn(function() game:GetService("ReplicatedStorage").meleeEvent:FireServer(unpack(args)) end) end end end end end
+  	end
+})
+
 local Tab = Window:MakeTab({
     Name = "力量传奇",
     Icon = "rbxassetid://7734068321",
@@ -2963,6 +2978,13 @@ Tab:AddButton({
     Callback = function()
     loadstring(game:HttpGet("https://pastebin.com/raw/AyeCYbT6"))()
     end
+})
+
+Tab:AddButton({
+	Name = "脚本1",
+	Callback = function()
+ loadstring(game:HttpGet('\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\98\111\121\115\99\112\47\98\101\116\97\47\109\97\105\110\47\37\69\57\37\56\48\37\57\70\37\69\53\37\66\65\37\65\54\37\69\55\37\56\50\37\66\56\37\69\56\37\66\53\37\66\55\46\108\117\97'))()
+  	end
 })
 
 local Tab = Window:MakeTab({
@@ -3217,5 +3239,130 @@ Tab:AddButton({
 	Name = "自动杀鲨鱼",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
+  	end
+})
+
+local Tab = Window:MakeTab({
+	Name = "火箭发射模拟器",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "自动收集燃料",
+	Callback = function(ARL)
+    isFuelScoopEnabled = ARL while true do wait() if isFuelScoopEnabled then for i, h in pairs(game.Players.LocalPlayer.Character:GetChildren()) do if h:IsA("Tool") and h.Name == "FuelScoop" then h:Activate() end end end end
+  	end
+})
+
+Tab:AddButton({
+	Name = "登上火箭",
+	Callback = function()
+	game:GetService("ReplicatedStorage"):WaitForChild("BoardRocket"):FireServer()
+  	end
+})
+
+Tab:AddButton({
+	Name = "移出所有玩家",
+	Callback = function()
+      game:GetService("ReplicatedStorage"):WaitForChild("RemovePlayer"):FireServer()
+  	end
+})
+
+Tab:AddButton({
+	Name = "发射台岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-123.15931701660156, 2.7371432781219482, 3.491959810256958)
+  	end
+})
+
+Tab:AddButton({
+	Name = "白云岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-76.13252258300781, 170.55825805664062, -60.4516716003418)
+  	end
+})
+
+Tab:AddButton({
+	Name = "悬浮岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-66.51714324951172, 720.4866333007812, -5.391753196716309)
+  	end
+})
+
+Tab:AddButton({
+	Name = "卫星岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-34.2462043762207, 1429.4990234375, 1.3739361763000488)
+  	end
+})
+
+Tab:AddButton({
+	Name = "蜜蜂迷宫岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.5361199378967285, 3131.249267578125, -29.759048461914062)
+  	end
+})
+
+Tab:AddButton({
+	Name = "月球人救援",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.212917804718018, 5016.341796875, -19.815933227539062)
+  	end
+})
+
+Tab:AddButton({
+	Name = "暗物质岛",
+	Callback = function()
+      lgame.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(68.43186950683594, 6851.94091796875, 7.890637397766113)
+  	end
+})
+
+Tab:AddButton({
+	Name = "太空岩石岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(49.92888641357422, 8942.955078125, 8.674375534057617)
+  	end
+})
+
+Tab:AddButton({
+	Name = "0号火星岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54.44503402709961, 11270.0927734375, -1.273137092590332)
+  	end
+})
+
+Tab:AddButton({
+	Name = "太空水晶小行星岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.579089164733887, 15295.6318359375, -27.54974365234375)
+  	end
+})
+
+Tab:AddButton({
+	Name = "月球浆果岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14.601255416870117, 18410.9609375, 0.9418511986732483)
+  	end
+})
+
+Tab:AddButton({
+	Name = "铺路石岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3.272758960723877, 22539.494140625, 63.283935546875)
+  	end
+})
+
+Tab:AddButton({
+	Name = "流星岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-45.515689849853516, 27961.560546875, -7.358333110809326)
+  	end
+})
+
+Tab:AddButton({
+	Name = "升级岛",
+	Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2.7595248222351074, 33959.98828125, 53.93095397949219)
   	end
 })

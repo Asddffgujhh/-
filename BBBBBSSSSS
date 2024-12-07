@@ -1,16 +1,5 @@
 loadstring(game:HttpGet("https://pastebin.com/raw/9fFu43FF"))()
 
-local function SendChatMessage(message)
-    if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
-        local textChannel = TextChatService.TextChannels.RBXGeneral
-        textChannel:SendAsync(message)
-    else
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
-    end
-end
-
-SendChatMessage("BS黑洞中心")
-
 game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "看到这个就代表可以用"; Text ="请耐心等待加载"; Duration = 4; })
 
 local CoreGui = game:GetService("StarterGui")
@@ -3206,10 +3195,10 @@ local Tab = Window:MakeTab({
   })
   
 Tab:AddButton({
-Name=“脚本 1”，
-回调=function（）
+	Name = "脚本1",
+	Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/frkfx/Combat-Warriors/main/Script"))()
-结束
+  	end
 })
 
 Tab:AddButton({
@@ -3219,23 +3208,23 @@ Tab:AddButton({
   	end
 })
 
-Name=“脚本 2”，
-回调=function（）
-结束
 local Tab = Window:MakeTab({
+	Name = "鲨口求生2",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
 })
 Tab:AddDropdown({
-Name=“鲨口求生 2”，
-Icon = "rbxassetid://7734068321",
-PremiumOnly = false
-Name=“免费船只”，
-Default = "1",
+	Name = "免费船只",
+	Default = "1",
+	Options = {"鸭子船bat", "鸭子船", "蓝色汽艇", "蓝木摩托艇", "独角兽船", "Jetski", "红马", "单桅帆船", "拖船", "小型游艇", "JetskiDonut", "马林鱼", "管状船", "渔船", "海盗船", "小型木制帆船", "红色摩托艇", "双体船", "战斗艇", "旅游船", "鸭子海洋生物", "派对船", "军用潜艇",  "姜饼轮船", "雪橇2022", "雪地车", "游轮"},
+	Callback = function(Value)
+local ohString1 = (Value)
 game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
-Options = {"鸭子船bat", "鸭子船", "蓝色汽艇", "蓝木摩托艇", "独角兽船", "Jetski", "红马", "单桅帆船", "拖船", "小型游艇", "JetskiDonut", "马林鱼", "管状船", "渔船", "海盗船", "小型木制帆船", "红色摩托艇", "双体船", "战斗艇", "旅游船", "鸭子海洋生物", "派对船", "军用潜艇", "姜饼轮船", "雪橇2022", "雪地车", "游轮"},
+	end
 })
 Tab:AddButton({
-回调=函数（值）
-本地ohString1=（值）
+	Name = "自动杀鲨鱼",
+	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
-结束
+  	end
 })
